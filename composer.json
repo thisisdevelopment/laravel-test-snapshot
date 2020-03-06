@@ -1,0 +1,34 @@
+{
+    "name": "thisisdevelopment/laravel-test-snapshot",
+    "description": "Laravel database snapshotting for phpunit tests",
+    "keywords": ["laravel", "database", "tests", "snapshots"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric de Ruiter",
+            "email": "eric@thisisdevelopment.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "6.x|7.x",
+        "illuminate/console": "6.x|7.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThisIsDevelopment\\LaravelTestSnapshot\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ThisIsDevelopment\\LaravelTestSnapshot\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "6.x|7.x"
+    }
+}
