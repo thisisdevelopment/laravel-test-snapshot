@@ -12,7 +12,8 @@
     "require": {
         "php": ">=7.2",
         "illuminate/support": "6.x|7.x",
-        "illuminate/console": "6.x|7.x"
+        "illuminate/console": "6.x|7.x",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

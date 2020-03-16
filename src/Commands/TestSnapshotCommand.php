@@ -4,6 +4,8 @@ namespace ThisIsDevelopment\LaravelTestSnapshot;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
 use Symfony\Component\Finder\SplFileInfo;
 
 class TestSnapshotCommand extends Command
