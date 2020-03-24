@@ -1,6 +1,6 @@
 <?php
 
-namespace ThisIsDevelopment\LaravelTestSnapshot;
+namespace ThisIsDevelopment\LaravelTestSnapshot\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Contracts\Console\Kernel;
-use ThisIsDevelopment\LaravelTestSnapshot\TestSnapshotCommand;
+use ThisIsDevelopment\LaravelTestSnapshot\Commands\TestSnapshotCommand;
+use Illuminate\Console\Application as Artisan;
 
 require_once __DIR__ . '/../../../autoload.php';
 
@@ -38,8 +39,16 @@ if ($_SERVER['DB_DATABASE'] !== ':memory:' && !file_exists($_SERVER['DB_DATABASE
 
 ini_set('memory_limit', '256M');
 
+/** @var \Illuminate\Contracts\Foundation\Application $app */
 $app = require __DIR__ . '/../../../../bootstrap/app.php';
+
+/** @var Kernel $console */
 $console = tap($app->make(Kernel::class))->bootstrap();
+
+Artisan::starting(function (Artisan $artisan) {
+    $artisan->resolveCommands(TestSnapshotCommand::class);
+});
+
 foreach ($commands as $command) {
     $console->call($command);
 }

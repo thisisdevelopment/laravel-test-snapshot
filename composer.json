@@ -22,13 +22,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ThisIsDevelopment\\LaravelTestSnapshot\\ServiceProvider"
-            ]
-        }
-    },
     "require-dev": {
         "laravel/framework": "6.x|7.x"
     }
