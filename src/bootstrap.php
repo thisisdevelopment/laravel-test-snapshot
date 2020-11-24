@@ -45,6 +45,14 @@ $app = require __DIR__ . '/../../../../bootstrap/app.php';
 /** @var Kernel $console */
 $console = tap($app->make(Kernel::class))->bootstrap();
 
+/*
+ * Dingo interoparability; from the dingo wiki (https://github.com/dingo/api/wiki/Commands#apicache)
+ * Important: Running route:cache by itself will prevent your API routes from being accessible.
+ */
+if ($app->bound(\Dingo\Api\Routing\Router::class)) {
+    $commands[] = 'api:cache';
+}
+
 Artisan::starting(function (Artisan $artisan) {
     $artisan->resolveCommands(TestSnapshotCommand::class);
 });
