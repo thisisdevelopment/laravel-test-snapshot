@@ -50,7 +50,10 @@ $console = tap($app->make(Kernel::class))->bootstrap();
  * Important: Running route:cache by itself will prevent your API routes from being accessible.
  */
 if ($app->bound(\Dingo\Api\Routing\Router::class)) {
-    $commands[] = 'api:cache';
+    /*
+     * Note: api:cache causes issues with mocks in tests, don't use route caching with dingo for now
+     */
+    $commands[] = 'api:clear';
 }
 
 Artisan::starting(function (Artisan $artisan) {
