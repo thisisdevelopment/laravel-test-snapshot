@@ -53,7 +53,7 @@ if ($app->bound(\Dingo\Api\Routing\Router::class)) {
     /*
      * Note: api:cache causes issues with mocks in tests, don't use route caching with dingo for now
      */
-    $commands[] = 'api:clear';
+    $commands[] = 'route:clear';
 }
 
 Artisan::starting(function (Artisan $artisan) {
