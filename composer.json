@@ -11,8 +11,8 @@
     ],
     "require": {
         "php": ">=7.2",
-        "illuminate/support": "6.x|7.x|8.x|9.x",
-        "illuminate/console": "6.x|7.x|8.x|9.x",
+        "illuminate/support": "6.x|7.x|8.x|9.x|10.x",
+        "illuminate/console": "6.x|7.x|8.x|9.x|10.x",
         "ext-json": "*"
     },
     "autoload": {
@@ -23,6 +23,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "laravel/framework": "6.x|7.x|8.x|9.x"
+        "laravel/framework": "6.x|7.x|8.x|9.x|10.x"
     }
 }
